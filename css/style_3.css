@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Almarai', sans-serif;
+}
+
+:root{
+    --bg-color: #ffb650;
+    --main-color: #11294c;
+    --color: #f5f7f7;
+}
+a, a:hover{
+    text-decoration: none;
+    color: #000 !important;
+}
+.bg-orange{
+    background: var(--bg-color);
+    height: 80px;
+}
+
+/* navbar */
+.navbar-brand{
+    width: fit-content;
+    height: 100%;
+}
+.navbar-brand img{
+    width: 100%;
+    height: 100%;
+}
+.login{
+    padding-top: 10px;
+}
+
+.input-group-text{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    top:0;
+    left: -10%;
+    z-index: 1;
+    font-size: 26px;
+    font-weight: normal;
+}
+.searchInput{
+    border: none;
+    outline: none;
+    width: 400px !important;
+    text-align: left;
+    height: 45px;
+    border-radius: 20px !important;
+    padding: 20px;
+    font-size: 15px;
+    background-color: var(--color) !important;
+}
+.searchInput::placeholder{
+    color: #000;
+    font-weight: bold;
+}
+/* navbar */
+
+/* hero */
+.hero{
+    width: 100%;
+    height: auto;
+    background: var(--main-color);
+    color: #fff;
+}
+.hero .hero-box{
+    margin: 30px auto;
+    width: 75%;
+}
+.hero .hero-box .tags {
+    background-color: transparent;
+    border: 1px solid #fff7e9;
+    color: #fff;
+}
+.hero .hero-box .tags:hover{
+    color: #000;
+    background-color: #fff7e9;
+}
+
+.hero .links .nav .nav-item .nav-link{
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--bg-color);
+}
+.hero .links .nav .nav-item .nav-link.active{
+    color: #fff !important;
+    text-decoration: underline solid;
+}
+
+/* hero */
+
+/* content */
+.content-boxs .box{
+    width: 100%;
+    height: 150px;
+    background: var(--color);
+}
+
+.content-boxs .boxs, .following .box{
+    width: 100%;
+    background: var(--color);
+    height: auto;
+}
+.following .box {
+    padding: 40px 20px;
+}
+.following .title{
+    font-size: 1.1vw !important;
+}
+.follow_btn{
+    width: fit-content;
+    padding: 5px 20px;
+    background: var(--bg-color);
+    border-radius: 5px;
+}
+.tags{
+    background: var(--color);
+    border: 1px solid rgb(182, 180, 180);
+    color: #000;
+    padding: 8px 10px;
+    margin: 5px;
+    font-weight: 300;
+}
+
+.card{
+    border: none;
+    background-color: var(--color);
+    position: relative;
+}
+.about{
+    border: 2px solid #ddd;
+    background-color: #fff;
+}
+.post .mrak{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 1%;
+}
+.post .mrak img {
+    width: 25px;
+}
+.post .mrak::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-style: solid;
+    border-color: transparent transparent var(--color) transparent;
+    border-width: 15px;
+}
+.post .tags{
+    margin: 0 4px;
+}
+.user{
+    width: 25px;
+    margin-left: 5px;
+    border-color: black;
+}
+.info-content{
+    background-color: rgb(250, 250, 250);
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.orange-bg {
+    background-color: #FEF6E6;
+    border: none;
+    padding: 6px 30px;
+}
+
+
+.info-content .info p{
+    font-size: 0.8rem;
+    margin: 0 1rem ;
+}
+.info-content .icons img{
+    font-size: 1rem;
+    margin: 0 0.3rem;
+}
+/* content */
+.facebook{
+    background: #1b58af;
+}
+.google{
+    background: #f54a1f;
+}
+.linkedin{
+    background: #197bbc;
+}
+.follow_btn{
+    width: fit-content;
+    padding: 5px 20px;
+    background: var(--bg-color);
+    border-radius: 5px;
+}
+.reply{
+    color: var(--bg-color) !important;
+}
+
+.form-input{
+    border: none;
+    border-bottom: 2px solid #ddd;
+    border-radius: none;
+}
+.following .tags{
+    background-color: #fff7e9;
+    border: none;
+}
+
+.post .text-content p{
+    font-size: 1vw;
+}
+
+
+@media (max-width: 991px){
+    .following .box{
+        padding: 20px 10px;
+    }
+    .following .tags{
+        font-size: 1vw;
+    }
+    .p_text{
+        font-size: 2vw !important;
+    }
+}
+
+
+
+@media (max-width: 768px){
+    .hero .carousel-indicators{
+        bottom: -40% !important;
+    }
+    .text-content p{
+        font-size: .8rem;
+    }
+    .content-boxs .reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .following .title{
+        font-size: 1.7vw !important;
+    }
+    .title{
+        font-size: 0.8rem !important;
+    }
+    .info-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 490px){
+    .following .title{
+        font-size: 2vw !important;
+    }
+    .hero .carousel-item p{
+        font-size: medium;
+    }
+    .info-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .icons i, .info p{
+        font-size: 2vw !important;
+        margin: 0  5px !important;
+    }
+    .user{
+        width: 35px;
+        height: 35px;
+        margin-left: 5px;
+    }
+    .admin{
+        font-size: 3vw !important;
+    }
+    .p_text{
+        font-size: 3vw !important;
+    }
+    .post .mrak{
+        left: 0;
+        padding: 5px 5px 15px 5px;
+        width: 15px;
+        font-size: 6px;
+    }
+    .post .mrak::before{
+        border-width: 8px;
+    }
+    .follow_btn{
+        padding: 5px 10px;
+        font-size: 3vw !important;
+    }
+    .post-content .tags{
+        font-size: 2vw;
+    }
+    .auter .fa-user, .following .fa-user{
+        font-size: 2vw;
+    }
+    .hero .links .nav .nav-item .nav-link{
+        font-size: 15px;
+    }
+
+}

@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <link rel="stylesheet" href="css/style_2.css">
+    <title>خبراء</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+  </head>
+  <body>
+<!-- navbar -->
+<nav class="navbar bg-orange">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" class="img-fluid" alt="">
+        </a>
+        <ul class="nav">
+            <li class="nav-item">
+                <div class="input-group mb-3 search-container">
+                    <span class="input-group-text" id= 'search'><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control d-none d-lg-block searchInput" placeholder="Search"  aria-describedby="search">
+                  </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-capitalize login" href="#loginModal" data-bs-toggle="modal" >login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- navbar -->
+<!-- login modal -->
+<div class="modal fade" id="loginModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-body border-top border-4 border-warning rounded-2 shadow-sm">
+        <h5 class="text-capitalize fw-bold mb-4">sign in via social media</h5>
+        <div class="social-bnts text-center ">
+          <a href="#" class="btn d-block btn-lg  facebook w-75 mb-2 mx-auto text-white fw-bold"> <img src="img/Path 409@2x.png" width="15px" height="20px" class="img-fluid ms-2" alt=""> login</a>
+          <a href="#" class="btn d-block btn-lg  google w-75 mb-2 mx-auto text-white fw-bold"> <img src= "img/Path 411@2x.png" width="22px" height="20px" class="img-fluid ms-2" alt=""> login</a>
+          <a href="#" class="btn d-block btn-lg  linkedin w-75 mb-2 mx-auto text-white fw-bold"> <img src="img/Group 534@2x.png" width="20px" height="20px" class="img-fluid ms-2" alt=""> login</a>
+        </div>
+        <h5 class="text-capitalize fw-bold mb-2">sign in via email</h5>
+        <form action="" class="px-3">
+          <div class="mb-2">
+            <label for="username" class="form-label text-capitalize">username:</label>
+            <input type="text" class="form-control form-input" id="username">
+          </div>
+          <div class="mb-2">
+            <label for="password" class="form-label text-capitalize">password: </label>
+            <input type="text" class="form-control form-input" id="password">
+          </div>
+          <div class="mb-2">
+            <input type="checkbox" class="form-check-input" id="remember">
+            <label class="form-check-label" for="remember">remember me </label>
+          </div>
+          <button type="submit" class="btn follow_btn fw-bold w-50 mb-2 d-block mx-auto">login</button>
+        </form>
+        <div class="signup_link ">
+          <p>I dont have an account <a class="text-capitalize reply" href="#signup" data-bs-toggle="modal" >signup</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="signup" data-backdrop="static" data-keyboard="false" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-body border-top border-4 border-warning rounded-2 shadow-sm">
+      <h5 class="text-capitalize fw-bold mb-4">sign in via social media</h5>
+      <div class="social-bnts text-center ">
+        <a href="#" class="btn d-block btn-lg  facebook w-75 mb-2 mx-auto text-white fw-bold"> <img src="img/Path 409@2x.png" width="15px" height="20px" class="img-fluid ms-2" alt=""> login</a>
+        <a href="#" class="btn d-block btn-lg  google w-75 mb-2 mx-auto text-white fw-bold"> <img src= "img/Path 411@2x.png" width="22px" height="20px" class="img-fluid ms-2" alt=""> login</a>
+        <a href="#" class="btn d-block btn-lg  linkedin w-75 mb-2 mx-auto text-white fw-bold"> <img src="img/Group 534@2x.png" width="20px" height="20px" class="img-fluid ms-2" alt=""> login</a>
+      </div>
+        <h5 class="text-capitalize fw-bold mb-2">sign up via email</h5>
+        <form action="" class="px-3">
+          <div class="mb-2">
+            <label for="firstName" class="form-label text-capitalize">first name:</label>
+            <input type="text" class="form-control form-input" id="firstName">
+          </div>
+          <div class="mb-2">
+            <label for="lastName" class="form-label text-capitalize">last name:</label>
+            <input type="text" class="form-control form-input" id="lastName">
+          </div>
+          <div class="mb-2">
+            <label for="email" class="form-label text-capitalize"> email:</label>
+            <input type="email" class="form-control form-input" id="email">
+          </div>
+          <div class="mb-2">
+            <label for="password" class="form-label text-capitalize">password: </label>
+            <input type="text" class="form-control form-input" id="password">
+          </div>
+          <div class="mb-2">
+            <input type="checkbox" class="form-check-input" id="remember">
+            <label class="form-check-label" for="remember">remember me </label>
+          </div>
+          <button type="submit" class="btn follow_btn fw-bold  w-50 mb-2 mx-auto d-block">signup</button>
+        </form>
+        <div class="signup_link">
+          <p>I have an account <a class="text-capitalize reply" href="#loginModal" data-bs-toggle="modal" >login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<!-- login modal -->
+<!-- section hero -->
+<div class="container mt-2">
+    <div class="hero rounded-2 shadow-sm">
+        <div class="row ">
+            <div class="col-8 offset-2 mx-auto">
+                <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <p class="d-block lh-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio nisi,
+                             omnis rerum expedita libero vel hic ad quia harum! Maxime quo cum suscipit tempore commodi veniam
+                             quod culpa ipsa laboriosam, temporibus dignissimos incidunt iusto magni quas non quis et?</p>
+                      </div>
+                      <div class="carousel-item">
+                        <p class="d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio nisi,
+                            omnis rerum expedita libero vel hic ad quia harum! Maxime quo cum suscipit tempore commodi veniam
+                            quod culpa ipsa laboriosam, temporibus dignissimos incidunt iusto magni quas non quis et?</p>
+                      </div>
+                      <div class="carousel-item">
+                        <p class="d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio nisi,
+                            omnis rerum expedita libero vel hic ad quia harum! Maxime quo cum suscipit tempore commodi veniam
+                            quod culpa ipsa laboriosam, temporibus dignissimos incidunt iusto magni quas non quis et?</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- section hero -->
+
+<!-- section content -->
+<div class="container mt-2">
+  <div class="content-boxs">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 mt-2">
+        <div class="row">
+          <div class="col-12">
+            <nav aria-label="breadcrumb" dir="ltr" class="d-none d-lg-block">
+              <ol class="breadcrumb fw-bold text-capitalize justify-content-end">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item " aria-current="page">tag name</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="row g-3">
+          <!-- all article box -->
+          <div class="col-lg-4 col-md-12">
+            <div class="box mb-2 text-center d-none d-lg-block rounded-2 shadow-sm">
+              <img  style="width:60px;" src="img/r1.png" alt="">
+                <!-- <img src="img/user.png" class="img-fluid img-thumbnail rounded-circle" alt=""> -->
+                <a href="page_3.html"><h3 class="fs-6">admin</h3></a>
+                
+                <p>Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Laboriosam, vero</p>
+                <div class="mb-3 ">
+                    <span class="badge tags rounded-2 shadow-sm" style="background: #fff7e9; border: none;">lorem</span>
+                    <span class="badge tags rounded-2 shadow-sm" style="background: #fff7e9; border: none;">lorem</span>
+                    <span class="badge tags rounded-2 shadow-sm" style="background: #fff7e9; border: none;">lorem</span>
+                </div>
+                <a href="#" class="my-3 text-capitalize follow_btn ">follow</a> 
+                <div class="icon text-center my-4">
+                    <i class="far fa-comment-dots"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-eye"></i>
+                </div>
+            </div>
+            <div class="box d-block d-lg-none p-3 mb-3">
+              <div class="top-user d-flex justify-content-between align-items-center">
+                <i class="fas fa-user fa-2x p-2 rounded-circle border-dark text-dark border"></i>
+                <!-- <img src="img/user.png" class="img-fluid img-thumbnail rounded-circle" alt=""> -->
+                <div class="text w-75 p-2">
+                  <a href="page_3.html"><h3 class="fs-6">admin</h3></a>
+                  <p>Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Laboriosam, vero</p>
+                </div>
+              </div>
+              <div class="mb-3 text-center">
+                <span class="badge tags rounded-2 shadow-sm"style="background: #fff7e9; border: none;">lorem</span>
+                <span class="badge tags rounded-2 shadow-sm"style="background: #fff7e9; border: none;">lorem</span>
+                <span class="badge tags rounded-2 shadow-sm"style="background: #fff7e9; border: none;">lorem</span>
+              </div>
+              <div class="bottom-user d-flex justify-content-between align-items-center px-3">
+                <a href="#" class="my-3 text-capitalize follow_btn ">follow</a> 
+                <div class="icon text-center my-4">
+                    <i class="far fa-comment-dots"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-eye"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- all article box -->
+      <!-- posts box -->
+      <div class="col-lg-8 col-md-12 mb-3">
+        <!-- post -->
+        <div class="card mb-2">
+          <div class="card-body p-0 rounded-2 shadow-sm">
+            <div class="post">
+              <div class="mrak">
+                <img src="img/Group_122x.png" alt="">
+              </div>
+              <div class="post-content">
+                <div class="text-content px-3 ">
+                  <p class="lead fw-bold mb-1 lh-base mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ipsam</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+                <div class="info-content ">
+                  <div class="info d-flex justify-content-between align-items-center">
+                    <p class="">21 September</p>
+                    <p class="">5 min read</p>
+                    <p class="d-none d-lg-block"><span class="badge tags" style="background: #fff7e9 !important; border: none;">lorem</span></p>
+                  </div>
+                  <div class="icons">
+                    <a href="#"><img style="width: 20px; margin: 0;" src="img/Group_262x.png" alt=""></a>
+                    <a href="#"><img style="width: 20px; margin: 0;" src="img/Group_252x.png" alt=""></a>
+                    <a href="#"><img style="width: 20px; margin: 0;" src="img/Group_242x.png" alt=""></a>
+                  </div>
+                </div>
+                <div class="img-post my-2 px-3">
+                    <img src="img/img_post.jpg" class="img-fluid d-block w-100 h-50  rounded-2 shadow-sm" alt="">
+                </div>
+                <div class="text px-3 mb-2">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint voluptates cupiditate repellat suscipit ducimus possimus placeat sunt, accusantium ullam perspiciatis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo reiciendis ex, deserunt laborum ipsa sint minima sapiente temporibus atque, commodi sequi quam dolor aspernatur, repellendus amet numquam ipsam est non.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et consectetur beatae eos fuga, odit aut</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe alias eius a cumque ab voluptate numquam ipsa vitae veritatis accusamus aliquam, placeat velit pariatur at, nobis omnis odit sequi laboriosam?</p>
+                </div>
+                <div class="follow text-center border-top border-4 border-warning">
+                    <p class="fw-bold mt-4 lh-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, blanditiis</p>
+                    <p class="lh-md mt-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi quas deserunt sit illum eos at ratione corporis dolore magni quidem</p>
+                    <a href="#" class="my-3 text-capitalize follow_btn fw-bold"> follow </a>
+                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, sint!</p>
+                    <div class="info-content sm-info-content d-flex justify-content-between align-items-center">
+                        <div class="info sm-info d-flex justify-content-between align-items-center">
+                          <p class=""><i class="far fa-clock"></i> 21 September</p>
+                          <p class="reply">#admin</p>
+                          <p class="">admin : by</p>
+                        </div>
+                        <div class="icons">
+                          <span>342   <img src="img/Path 20.png" alt=""></span>
+                           <span>342    <img src="img/Path 22.png" alt=""> </span>
+                           <span>23 <img src="img/Path 21.png" alt=""> </span>
+                         </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comments d-flex justify-content-between align-items-start">
+            <div class="img-user ms-2">
+             <img  style="width: 47px;" src="img/r1.png" alt="">
+                <!-- <img src="img/user.png" class="img-fluid img-thumbnail rounded-circle user" alt=""> -->
+            </div>
+            <div class="card">
+                <div class="card-body p-0 rounded-2 shadow-sm">
+                    <div class="follow ">
+                        <p class="fw-bold my-2 pe-2 admin">admin</p>
+                        <p class="lh-md mt-1 pe-2 comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi quas deserunt sit illum eos at ratione corporis dolore magni quidem</p>
+                        <div class="info-content d-flex justify-content-between align-items-center">
+                            <div class="info d-flex justify-content-between align-items-center">
+                              <p class=""><i class="far fa-clock"></i> 21 September</p>
+                              <span class="reply ">replay</span>
+                            </div>
+                            <div class="icons">
+                             <span>342   <img src="img/Path 20.png" alt=""></span>
+                              <span>342    <img src="img/Path 22.png" alt=""> </span>
+                              <span>23 <img src="img/Path 21.png" alt=""> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- post -->
+      
+      </div>
+    <!-- posts box -->
+        </div>
+      </div>
+      <!-- tags box -->
+      <div class="col-lg-4 col-md-12 mt-3">
+        <div class="title-content mb-2">
+          <h2 class="title text-capitalize text-center text-md-end  fw-bold fs-4">tags</h2>
+        </div>
+        <div style='padding-bottom:100px ;' class="boxs mb-2  h-auto rounded-2 shadow-sm">
+          <span class="badge tags rounded-2 shadow-sm">lorem</span>
+          <span class="badge tags rounded-2 shadow-sm">Lorem ipsum</span>
+          <span class="badge tags rounded-2 shadow-sm">lorem</span>
+          <span class="badge tags rounded-2 shadow-sm">Lorem ipsum </span>
+          <span class="badge tags rounded-2 shadow-sm">Lorem ipsum dolor</span>
+          <span class="badge tags rounded-2 shadow-sm">lorem</span>
+        </div>
+        <div class="d-none d-lg-block">
+          <span class="badge  text-secondary mx-1">حرية</span>
+          <span class="badge  text-secondary mx-1"> دمار شامل</span>
+          <span class="badge  text-secondary mx-1">فيروس</span>
+          <span class="badge  text-secondary mx-1">حدائق عامة ومنتزهات</span>
+        </div>
+        
+      </div>
+      <!-- tags box -->
+    </div>
+  </div>
+</div>
+
+
+<!-- section content -->
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/ulg/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
